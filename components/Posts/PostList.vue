@@ -2,18 +2,21 @@
     <section class="post-list">
         <PostPreview
             id="1"
+            :is-admin="isAdmin"
             thumbnail="https://st2.depositphotos.com/1297553/8277/v/600/depositphotos_82777500-stock-video-binary-digital-tech-data-code.jpg"
             title="Hello there!"
             previewText="This is my first post!"
         />
         <PostPreview
             id="2"
+            :is-admin="isAdmin"
             thumbnail="https://st2.depositphotos.com/1297553/8277/v/600/depositphotos_82777500-stock-video-binary-digital-tech-data-code.jpg"
             title="Hello there - the second time!"
             previewText="This is my second post!"
         />
         <PostPreview
             id="3"
+            :is-admin="isAdmin"
             thumbnail="https://st2.depositphotos.com/1297553/8277/v/600/depositphotos_82777500-stock-video-binary-digital-tech-data-code.jpg"
             title="Hi!"
             previewText="This is my third post!"
@@ -27,6 +30,12 @@
     export default {
         components: {
             PostPreview
+        },
+        props: {
+            isAdmin: {
+                type: Boolean,
+                default: false
+            }
         }
     };
 </script>
